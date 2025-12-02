@@ -1,0 +1,30 @@
+请严格依据以下“标题 + 摘要”按**精简 Schema**输出**纯 JSON**；不要任何解释文字。
+
+<TITLE>: {title}
+<YEAR>: {year}
+<VENUE>: {venue}
+<URL>: {url}
+
+<ABSTRACT>:
+{abstract}
+
+【执行要点】
+1) 先判 doc_type：
+   - 主干：Model / Variant / AdapterModel
+   - 其他：Component / TrainObjective / InferencePolicy / Efficiency / System / Data / Benchmark / Survey / Theory / Undefined
+2) 仅当 doc_type ∈ {Model, Variant, AdapterModel}：填写 `core_brief`（仅这 5 项）：
+   - model_names_brief：逐字出现在题/摘的新模型名（列表）
+   - base_models_brief：仅预训练基座名（BERT/RoBERTa/DeBERTa/ALBERT/XLM-R…）
+   - innovation_quotes：从摘要逐字截取的**2–4 句**
+   - relation_summary_zh：中文 1–2 句
+   - relation_summary_en：英文 1–2 句（给不出可留空）
+3) 若为其他类别：**只输出 `doc_type` 与 `paper`**，不要任何细节字段。
+
+【只输出 JSON 示例】
+# 主干：
+{"doc_type":"Variant","paper":{"title":"{title}","year":{year},"venue":"{venue}","url":"{url}"},
+ "core_brief":{"model_names_brief":[],"base_models_brief":[],"innovation_quotes":[],"relation_summary_zh":"","relation_summary_en":""},
+ "fit_score":0.7}
+
+# 非主干：
+{"doc_type":"Survey","paper":{"title":"{title}","year":{year},"venue":"{venue}","url":"{url}"},"fit_score":0.5}

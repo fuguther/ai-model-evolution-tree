@@ -1,0 +1,166 @@
+# ============================================
+# 敏感信息和密钥 - 绝对不能提交！
+# ============================================
+.env
+.env.local
+.env.*.local
+*.env
+**/.env
+**/.env.local
+
+# API 密钥和配置文件
+*secret*
+*key*
+*password*
+*credential*
+config.ini
+secrets.json
+credentials.json
+
+# ============================================
+# Python 相关
+# ============================================
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python 缓存
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# ============================================
+# Node.js 相关
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# 构建输出
+dist/
+build/
+.next/
+out/
+.nuxt/
+.cache/
+
+# ============================================
+# 数据文件（大文件，避免提交）
+# ============================================
+*.xlsx
+*.xls
+*.parquet
+*.csv
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!vite.config.js
+!**/dashboard/public/data/*.json
+!**/dashboard/src/**/*.json
+
+# 但保留示例数据文件（如果需要）
+# !sample_data/*.csv
+# !sample_data/*.xlsx
+
+# ============================================
+# 文档和报告（可能包含敏感信息）
+# ============================================
+*.docx
+*.doc
+*.pdf
+!requirements.txt
+
+# ============================================
+# IDE 和编辑器
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# 操作系统文件
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ============================================
+# 日志文件
+# ============================================
+*.log
+logs/
+*.log.*
+
+# ============================================
+# 临时文件
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*~
+
+# ============================================
+# 批次处理结果（可能很大）
+# ============================================
+batch_results/
+output/
+results/
+*.xlsx
+!sample_*.xlsx
+
+# ============================================
+# 其他
+# ============================================
+*.zip
+*.tar.gz
+*.rar
+.cache/
+temp/
+tmp/
+
